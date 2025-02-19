@@ -8,7 +8,7 @@ import os
 import numpy as np
 #from statsbombpy import sb
 from mplsoccer import VerticalPitch,Pitch
-from highlight_text import ax_text, fig_text
+#from highlight_text import ax_text, fig_text
 #from mplcursors import cursor
 #import mplcursors
 import matplotlib.lines as mlines
