@@ -114,7 +114,12 @@ with col2:
         name='Goals',
         orientation='h',
         marker=dict(color=colors['Goal']),
-        hovertemplate='Player: %{y}<br>Goals: %{x}<extra></extra>'
+        hovertemplate='Player: %{y}<br>Goals: %{x}<extra></extra>',
+        text=player_stats['Goal'],
+        textposition='inside',
+        insidetextfont=dict(color='#006400',size=14),
+        textangle=0,
+        texttemplate = '<b>%{text}</b>'
     ))
 
     # Add Assists bar
@@ -124,7 +129,12 @@ with col2:
         name='Assists',
         orientation='h',
         marker=dict(color=colors['#Assists']),
-        hovertemplate='Player: %{y}<br>Assists: %{x}<extra></extra>'
+        hovertemplate='Player: %{y}<br>Assists: %{x}<extra></extra>',
+        text=player_stats['#Assists'],
+        textposition='inside',
+        insidetextfont=dict(color='black',size=14),
+        textangle=0,
+        texttemplate = '<b>%{text}</b>'
     ))
 
     # Update layout
@@ -132,7 +142,8 @@ with col2:
         title=f"Top Goal Scorers & Assists for {selected_team}",
         barmode='stack',
         xaxis_title='Attacking Threat',
-        yaxis_title='Player'
+        yaxis_title='Player',
+        xaxis = dict(showticklabels=False)
     )
 
     ##Update Legend title
